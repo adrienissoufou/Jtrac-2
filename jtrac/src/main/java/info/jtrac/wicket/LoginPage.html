@@ -18,16 +18,20 @@
         </table>             
         <form wicket:id="form" class="form-group">
             <div wicket:id="hide" style="margin-top:3.2em"></div>
+            
             <div wicket:id="feedback"></div>
-            <table class="jtrac">
+            
+            <table class="jtrac" style="border-collapse:separate; border-spacing:5px 5px;">
                 <tr>
                     <td><label class="control-label"><wicket:message key="login.loginName"/></label></td>
+                    <td style="padding-right: 20px"></td>
                     <td colspan="2">
                     	<input wicket:id="loginName" size="35" class="form-control" style="height: 30px"/> 
                     </td>
                 </tr>
                 <tr>
                     <td><label class="control-label" style="align: right"><wicket:message key="login.password"/></label></td>
+                    <td style="padding-right: 20px"></td>
                     <td align="right">
                     	<input type="password" wicket:id="password" size="20" class="form-control" style="height: 30px"/>
                     </td>
@@ -37,13 +41,15 @@
                 </tr> 
                 <tr>
                     <td/>
-                    <td colspan="2" align="right">
+                    <td colspan="3" align="right">
                         <wicket:message key="login.rememberMe"/>
                         <input type="checkbox" wicket:id="rememberMe"/>
                     </td>
                 </tr>                                              
             </table>
+            
         </form>
+        
         <div>
         	<br/>
         </div>
