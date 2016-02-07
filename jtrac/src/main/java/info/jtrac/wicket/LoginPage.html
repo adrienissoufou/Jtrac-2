@@ -3,29 +3,36 @@
     <head>
         <title wicket:id="title"></title>
         <link rel="stylesheet" type="text/css" href="resources/jtrac.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/bootstrap.css"/>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>        
     </head>
     <body>
         <span wicket:id="individuel"></span><br/>
         <table width="100%" class="jtrac alt">
             <tr>
-                <td><a href="app"><wicket:message key="login.home"/></a></td>
+                <td>
+                	<a href="app"><wicket:message key="login.home"/></a>
+                </td>
                 <td align="right"></td>
             </tr>
         </table>             
-        <form wicket:id="form" class="content">
+        <form wicket:id="form" class="form-group">
             <div wicket:id="hide" style="margin-top:3.2em"></div>
             <div wicket:id="feedback"></div>
             <table class="jtrac">
                 <tr>
-                    <td class="label"><wicket:message key="login.loginName"/></td>
-                    <td colspan="2"><input wicket:id="loginName" size="35"/></td>
+                    <td><label class="control-label"><wicket:message key="login.loginName"/></label></td>
+                    <td colspan="2">
+                    	<input wicket:id="loginName" size="35" class="form-control" style="height: 30px"/> 
+                    </td>
                 </tr>
                 <tr>
-                    <td class="label"><wicket:message key="login.password"/></td>
-                    <td><input type="password" wicket:id="password" size="20"/></td>
+                    <td><label class="control-label" style="align: right"><wicket:message key="login.password"/></label></td>
                     <td align="right">
-                        <input type="submit" wicket:message="value:login.submit"/>                        
+                    	<input type="password" wicket:id="password" size="20" class="form-control" style="height: 30px"/>
+                    </td>
+                    <td align="right">
+                        <input type="submit" wicket:message="value:login.submit" class="btn btn-default" style="height: 30px"/>                        
                     </td>
                 </tr> 
                 <tr>
@@ -37,13 +44,17 @@
                 </tr>                                              
             </table>
         </form>
-        <div><br/></div>
+        <div>
+        	<br/>
+        </div>
+        
         <table width="100%" class="jtrac">
             <tr class="alt">
                 <td align="right">
                     <i>powered by <a href="http://jtrac.info" target="_blank">JTrac</a> <span wicket:id="version"></span></i>
                 </td>
             </tr>
-        </table>            
+        </table>
+                    
     </body>
 </html>
